@@ -17,6 +17,7 @@ class TicketCreate(TicketBase):
 # Para Actualizar Estado (usado en el PATCH del Taller)
 class TicketUpdateEstado(BaseModel):
     estado: str
+    id_asignado: Optional[int] = None
     observacion_responsable: Optional[str] = None
     observacion_tecnico: Optional[str] = None
 
