@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from app.db import engine, Base
+from app.models.usuarios import Usuario
+from app.models.laboratorios import Laboratorio
+from app.models.servicios import Servicio
+from app.models.tickets import Ticket
 
-# Más adelante importaremos los modelos aquí para que SQLAlchemy los reconozca y cree las tablas
-# from app.models import usuarios, laboratorios, servicios, tickets
+# Crear las tablas en la base de datos (si no existen)
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="API Mesa de Servicios - Laboratorios ITM",
@@ -12,4 +16,4 @@ app = FastAPI(
 
 @app.get("/")
 def read_root():
-    return {"mensaje": "API de Mesa de Servicios activa. Taller 3 en línea."}
+    return {"mensaje": "API de Mesa de Servicios activa. Tablas sincronizadas."}
