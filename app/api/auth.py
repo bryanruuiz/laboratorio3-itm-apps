@@ -34,14 +34,18 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
         raise HTTPException(status_code=400, detail="Usuario inactivo")
 
     # 4. Construir el Token JWT
-    scopes_del_rol = ROLES_SCOPES.get(usuario.rol, [])
+    rol_usuario = usuario.rol.value if hasattr(usuario.rol, "value") else usuario.rol
+    if rol_usuario not in ROLES_SCOPES:
+        raise HTTPException(status_code=403, detail="El usuario tiene un rol invalido. Contacta al administrador.")
+
+    scopes_del_rol = ROLES_SCOPES.get(rol_usuario, [])
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     
     access_token = create_access_token(
         data={
             "sub": usuario.correo,
             "id_usuario": usuario.id_usuario,
-            "rol": usuario.rol,
+            "rol": rol_usuario,
             "scopes": scopes_del_rol # ¡Aquí inyectamos los scopes de la tabla!
         },
         expires_delta=access_token_expires
