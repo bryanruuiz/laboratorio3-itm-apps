@@ -246,13 +246,6 @@ Colocar las imagenes en `docs/evidencias/` con los nombres sugeridos.
 ![img.png](img.png)
 ![img_1.png](img_1.png)
 
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
-
 ### Evidencia 2 - solicitante intenta asignar ticket (denegado)
 
 - Usuario: solicitante
@@ -261,13 +254,6 @@ ____________________________________________________________
 
 ![img_6.png](img_6.png)
 ![img_7.png](img_7.png)
-
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
 
 ### Evidencia 3 - responsable recibe ticket (permitido)
 
@@ -278,13 +264,6 @@ ____________________________________________________________
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png) 
 
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
-
 ### Evidencia 4 - responsable asigna ticket (permitido)
 
 - Usuario: responsable_tecnico
@@ -293,13 +272,6 @@ ____________________________________________________________
 
 ![img_8.png](img_8.png)
 ![img_9.png](img_9.png)
-
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
 
 ### Evidencia 5 - auxiliar pasa a en_proceso (solo si esta asignado)
 
@@ -310,13 +282,6 @@ ____________________________________________________________
 ![img_10.png](img_10.png)
 ![img_11.png](img_11.png)
 
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
-
 ### Evidencia 6 - auxiliar intenta finalizar (denegado)
 
 - Usuario: auxiliar
@@ -325,13 +290,6 @@ ____________________________________________________________
 
 ![img_12.png](img_12.png)
 ![img_13.png](img_13.png)
-
-Espacio para observaciones:
-
-```
-____________________________________________________________
-____________________________________________________________
-```
 
 ### Evidencia 7 - tecnico especializado pasa a en_revision
 
